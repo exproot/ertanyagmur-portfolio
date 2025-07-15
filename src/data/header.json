@@ -1,0 +1,30 @@
+{
+  "name": "Ertan",
+  "title": "iOS Engineer",
+  "location": "Samsun, Türkiye",
+  "email": "ertanyagmur@outlook.com",
+  "introText": "I'm a recent CS grad passionate about iOS development, focused on writing maintainable, well-structured Swift code. I enjoy building apps that are both smooth and scalable.",
+  "navigation": [
+    {
+      "text": "Apps",
+      "href": "#apps"
+    }
+  ],
+  "social": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/ertanyagmur",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "GitHub", 
+      "url": "https://github.com/exproot",
+      "icon": "github"
+    },
+    {
+      "platform": "Medium",
+      "url": "https://medium.com/@ertanyagmur",
+      "icon": "medium"
+    }
+  ]
+} 

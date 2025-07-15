@@ -1,0 +1,20 @@
+[
+  {
+    "school": "Samsun University",
+    "logo": "/ertanyagmur-portfolio/assets/school-placeholder.png",
+    "degree": "Bachelor of Engineering | Sep 2021 - Aug 2025 (expected)",
+    "bullets": [
+      "Double Major in Software Engineering",
+      "GPA: 3.25/4.00"
+    ]
+  },
+  {
+    "school": "Samsun University",
+    "logo": "/ertanyagmur-portfolio/assets/school-placeholder.png",
+    "degree": "Bachelor of Engineering | Aug 2020 - Jan 2025",
+    "bullets": [
+      "Major in Electrical and Electronics Engineering",
+      "GPA: 3.08/4.00"
+    ]
+  }
+] 

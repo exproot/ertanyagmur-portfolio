@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Sismik",
+    "badge": "Stay Informed & Stay Safe",
+    "learnMoreUrl": "https://apps.apple.com/us/app/sismik/id6748555194?uo=4",
+    "headline": "Track seismic activities around you and the world in a beautifully crafted iOS experience.",
+    "screenshots": [
+      "/ertanyagmur-portfolio/assets/sismik/sismik-dashboard.png",
+      "/ertanyagmur-portfolio/assets/sismik/sismik-explore.png",
+      "/ertanyagmur-portfolio/assets/sismik/sismik-list.png",
+      "/ertanyagmur-portfolio/assets/sismik/sismik-map.png",
+      "/ertanyagmur-portfolio/assets/sismik/sismik-filter.png",
+      "/ertanyagmur-portfolio/assets/sismik/sismik-details.png"
+    ],
+    "appIcon": "/ertanyagmur-portfolio/assets/sismik/sismik-icon.png",
+    "technologies": ["Swift", "UIKit", "Clean Architecture"],
+    "cardColor": "linear-gradient(135deg, #a8d1cb 0%, #a7cade 100%)",
+    "appStoreUrl": "https://apps.apple.com/us/app/sismik/id6748555194?uo=4"
+  }
+] 
