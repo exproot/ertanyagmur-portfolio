@@ -1,0 +1,30 @@
+---
+// src/components/Education.astro
+const { education } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center mb-10">Education</h2>
+
+    <div class="grid gap-8 sm:grid-cols-2">
+      {education.map((item) => (
+        <div class="bg-white rounded-xl shadow-md p-6 space-y-4">
+          <div class="flex items-center gap-4">
+            {item.icon && (
+              <img src={`${import.meta.env.BASE_URL}${item.icon}`} alt={`${item.school} icon`} class="w-10 h-10 rounded-lg object-contain shadow-md bg-white" />
+            )}
+            <div>
+              <h3 class="text-base font-semibold text-neutral-900">{item.title}</h3>
+              <p class="text-sm text-neutral-500">{item.school} – {item.date}</p>
+            </div>
+          </div>
+          <p class="text-neutral-700 leading-relaxed">{item.description}</p>
+          <ul class="list-disc list-inside text-sm text-neutral-700">
+            {item.achievements.map(point => <li>{point}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

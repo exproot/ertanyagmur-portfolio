@@ -1,0 +1,102 @@
+{
+  "personal": {
+    "fullname": "Ertan Yağmur",
+    "name": "Ertan",
+    "title": "iOS Engineer",
+    "subtitle": "Recent CS graduate passionate about iOS development. I focus on writing maintainable, well-structured Swift code and building apps that are both smooth and scalable.",
+    "avatar": "assets/images/avatar-placeholder.png"
+  },
+  "projects": [
+    {
+      "title": "Sismik",
+      "type": "iOS App",
+      "description": "Sismik is a real-time earthquake tracking app designed to keep you connected to seismic activity around the world.",
+      "appIcon": "assets/images/sismik/sismik-icon.png",
+      "technologies": [
+        "SwiftUI & UIKit",
+        "Core Location",
+        "Combine",
+        "Clean Architecture"
+      ],
+      "links": {
+        "appstore": "https://apps.apple.com/us/app/sismik/id6748555194?uo=4"
+      },
+      "screenshots": [
+        "assets/images/sismik/sismik-dashboard.png",
+        "assets/images/sismik/sismik-explore.png",
+        "assets/images/sismik/sismik-list.png",
+        "assets/images/sismik/sismik-map.png",
+        "assets/images/sismik/sismik-filter.png",
+        "assets/images/sismik/sismik-details.png"
+      ]
+    },
+    {
+      "title": "NutriPlus",
+      "type": "iOS App",
+      "appIcon": "assets/images/nutri/nutri-icon.png",
+      "description": "NutriPlus is an app that utilizes AI-powered food recognition and personalized meal planning, it helps users track their meals and receive tailored dietary advice to support healthier living.",
+      "technologies": [
+        "UIKit",
+        "Combine",
+        "AVFoundation",
+        "MVVM",
+        "Google Gemini",
+        "Firebase"
+      ],
+      "links": {
+        "github": "https://github.com/exproot/NutriPlus"
+      },
+      "screenshots": [
+        "assets/images/nutri/nutri-home.png",
+        "assets/images/nutri/nutri-caloriestats.png",
+        "assets/images/nutri/nutri-bmr.png",
+        "assets/images/nutri/nutri-bmi.png",
+        "assets/images/nutri/nutri-aichat.png",
+        "assets/images/nutri/nutri-scan.png",
+        "assets/images/nutri/nutri-addmeal.png",
+        "assets/images/nutri/nutri-settings.png"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "iOS Developer Intern",
+      "company": "Loodos",
+      "icon": "assets/images/loodos.png",
+      "date": "Jul 2025 - Present",
+      "description": "",
+      "achievements": []
+    },
+    {
+      "title": "iOS Developer Intern",
+      "company": "VakıfBank",
+      "icon": "assets/images/vakifbank.png",
+      "date": "Sep 2024 - Jan 2025",
+      "description": "Gained exposure to Agile workflows and Scrum ceremonies, enhancing my understanding of team-based development and iterative delivery.",
+      "achievements": [
+        "Built iOS apps under mentorship, gaining hands-on experience in collaborative development and modern iOS development practices."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Bachelor of Engineering, Software Engineering",
+      "school": "Samsun University",
+      "icon": "assets/images/samsun-university.png",
+      "date": "Sep 2021 - Aug 2025",
+      "description": "Double Major",
+      "achievements": [
+        "GPA: 3.25/4.00"
+      ]
+    },
+    {
+      "title": "Bachelor of Engineering, Electrical and Electronics Engineering",
+      "school": "Samsun University",
+      "icon": "assets/images/samsun-university.png",
+      "date": "Aug 2020 - Jan 2025",
+      "achievements": [
+        "GPA: 3.08/4.00"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+---
+const { screenshots, title } = Astro.props;
+const id = title.replaceAll(' ', '-').toLowerCase();
+---
+
+<section
+  class="carousel-section relative w-full"
+  id={id}
+  data-carousel
+  client:load
+>
+  <!-- Carousel Track -->
+  <div
+    class="carousel-track flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 rounded-xl no-scrollbar"
+    data-carousel-inner
+  >
+    {screenshots.map((img, index) => (
+      <img
+        src={`${import.meta.env.BASE_URL}${img}`}
+        alt={`${title} screenshot ${index + 1}`}
+        class="carousel-img snap-center flex-shrink-0 rounded-xl max-h-[550px] w-full sm:w-auto object-contain shadow-md"
+        style="min-width: 100%;"
+      />
+    ))}
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button
+    class="carousel-button absolute left-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-white/80 rounded-full hover:bg-white shadow transition z-10"
+    aria-label="Previous"
+    data-carousel-prev
+  >‹</button>
+
+  <button
+    class="carousel-button absolute right-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-white/80 rounded-full hover:bg-white shadow transition z-10"
+    aria-label="Next"
+    data-carousel-next
+  >›</button>
+
+  <!-- Carousel Script -->
+  <script type="module">
+    const carousel = document.querySelector('[id="{id}"]');
+    const track = carousel.querySelector('[data-carousel-inner]');
+    const prev = carousel.querySelector('[data-carousel-prev]');
+    const next = carousel.querySelector('[data-carousel-next]');
+    const slides = track.querySelectorAll('img');
+
+    let index = 0;
+    let autoScroll;
+    let userInteracted = false;
+
+    const scrollToIndex = (i) => {
+      index = (i + slides.length) % slides.length;
+      const slide = slides[index];
+      track.scrollTo({
+        left: slide.offsetLeft,
+        behavior: 'smooth'
+      });
+    };
+
+    const resetAutoScroll = () => {
+      clearInterval(autoScroll);
+      userInteracted = true;
+      setTimeout(() => {
+        userInteracted = false;
+      }, 5000);
+      startAutoScroll();
+    };
+
+    prev.addEventListener('click', () => {
+      scrollToIndex(index - 1);
+      resetAutoScroll();
+    });
+
+    next.addEventListener('click', () => {
+      scrollToIndex(index + 1);
+      resetAutoScroll();
+    });
+
+    const startAutoScroll = () => {
+      autoScroll = setInterval(() => {
+        if (!userInteracted) {
+          scrollToIndex(index + 1);
+        }
+      }, 2000);
+    };
+
+    startAutoScroll();
+  </script>
+</section>
