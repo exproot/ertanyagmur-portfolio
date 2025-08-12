@@ -1,25 +1,26 @@
 ---
 import "../styles/apple-theme.css";
-import "../styles/global.css"; 
-import content from '../data/content.json';
-import Intro from '../components/Intro.astro';
-import Projects from '../components/Projects.astro';
-import Experience from '../components/Experience.astro';
-import Education from '../components/Education.astro';
-import Footer from '../components/Footer.astro';
+import "../styles/global.css";
+import content from "../data/content.json";
+import Intro from "../components/Intro.astro";
+import Projects from "../components/Projects.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Footer from "../components/Footer.astro";
 
-const { personal, contact, projects, experience, education } = content;
+const { personal, projects, experience, education } = content;
 ---
 
 <html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/ertanyagmur-portfolio/favicon.svg" />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} type="image/svg+xml" />
     <title>{personal.fullname} – Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
         background-color: #f5f5f7;
         color: #1f2937;
       }
@@ -27,25 +28,33 @@ const { personal, contact, projects, experience, education } = content;
   </head>
   <body class="flex flex-col min-h-screen">
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <!-- Left: Name -->
-        <span class="text-lg font-semibold tracking-tight text-gray-800">{personal.fullname}</span>
-
-        <!-- Right: Links -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur border-b border-gray-200"
+    >
+      <div class="container py-3 flex items-center justify-between">
+        <span class="text-lg font-semibold tracking-tight text-gray-800"
+          >{personal.fullname}</span
+        >
         <ul class="flex gap-6 text-sm text-gray-600 font-medium">
-          <li><a href="#about" class="hover:text-black transition">About</a></li>
-          <li><a href="#projects" class="hover:text-black transition">My Work</a></li>
-          <li><a href="#experience" class="hover:text-black transition">Experience</a></li>
+          <li>
+            <a href="#about" class="hover:text-black transition">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-black transition">My Work</a>
+          </li>
+          <li>
+            <a href="#experience" class="hover:text-black transition"
+              >Experience</a>
+          </li>
         </ul>
       </div>
     </nav>
 
-    <main class="flex-1 max-w-5xl mx-auto px-4 pt-28 pb-10 space-y-24">
-      <section id="about"><Intro personal={personal} /></section>
-      <section id="projects"><Projects projects={projects} /></section>
-      <section id="experience"><Experience experience={experience} /></section>
-      <section id="education"><Education education={education} /></section>
+    <main class="flex-1 container pt-28 pb-10 space-y-24">
+      <section id="about" class="anchor-offset"><Intro personal={personal} /></section>
+      <section id="projects" class="anchor-offset"><Projects projects={projects} /></section>
+      <section id="experience" class="anchor-offset"><Experience experience={experience} /></section>
+      <section id="education" class="anchor-offset"><Education education={education} /></section>
     </main>
 
     <!-- ⬆ Back to Top Button -->
@@ -56,8 +65,18 @@ const { personal, contact, projects, experience, education } = content;
         aria-label="Back to top"
       >
         <!-- Chevron Up Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 15l7-7 7 7"></path>
         </svg>
       </button>
     </div>
@@ -69,12 +88,12 @@ const { personal, contact, projects, experience, education } = content;
 <script src={`${import.meta.env.BASE_URL}scripts/carousel.js`} defer></script>
 
 <script>
-  window.addEventListener('scroll', () => {
-    const btn = document.getElementById('back-to-top');
+  window.addEventListener("scroll", () => {
+    const btn = document.getElementById("back-to-top");
     if (window.scrollY > 300) {
-      btn.classList.remove('hidden');
+      btn.classList.remove("hidden");
     } else {
-      btn.classList.add('hidden');
+      btn.classList.add("hidden");
     }
   });
 </script>
