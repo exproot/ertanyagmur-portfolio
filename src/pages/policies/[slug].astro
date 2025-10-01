@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import PolicyLayout from "../../components/PolicyLayout.astro";
+
+export async function getStaticPaths() {
+  // Build paths from your content collection
+  const entries = await getCollection("policies");
+  // If you have multiple languages per app, dedupe by appId
+  const appIds = Array.from(new Set(entries.map(e => e.data.appId)));
+
+  return appIds.map(appId => ({
+    params: { slug: appId }, // /policies/<appId>
+  }));
+}
+
+const { slug } = Astro.params;
+const lang = Astro.url.searchParams.get("lang") ?? "en";
+
+// Prefer exact language match for this appId
+const exact = await getCollection("policies", ({ data }) =>
+  data.appId === slug && data.language === lang
+);
+// Fallback to any language for that appId
+const fallback = await getCollection("policies", ({ data }) =>
+  data.appId === slug
+);
+
+const entry = exact[0] ?? fallback[0];
+
+if (!entry) {
+  // if no MD file for that appId, send back to index
+  return Astro.redirect(`${import.meta.env.BASE_URL}policies`);
+}
+
+const { Content } = await entry.render();
+const { title } = entry.data;
+---
+
+<PolicyLayout title={title}>
+  <Content />
+</PolicyLayout>
