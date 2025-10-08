@@ -8,6 +8,27 @@
   },
   "projects": [
     {
+      "title": "SwiftBrain",
+      "type": "iOS App",
+      "description": "SwiftBrain is where Swift developers learn, share, and grow together. Whether you’re a beginner exploring Swift or a seasoned iOS developer polishing your skills, SwiftBrain transforms learning into a community experience.",
+      "appIcon": "assets/images/swiftbrain/swiftbrain-icon.png",
+      "technologies": [
+        "SwiftUI & UIKit",
+        "Clean Architecture",
+        "Combine"
+      ],
+      "links": {
+        "appstore": "https://apps.apple.com/us/app/swiftbrain/id6748689676"
+      },
+      "screenshots": [
+        "assets/images/swiftbrain/dashboard.png",
+        "assets/images/swiftbrain/community.png",
+        "assets/images/swiftbrain/submit.png",
+        "assets/images/swiftbrain/quiz.png",
+        "assets/images/swiftbrain/result.png"
+      ]
+    },
+    {
       "title": "Sismik",
       "type": "iOS App",
       "description": "Sismik is a real-time earthquake tracking app designed to keep you connected to seismic activity around the world.",
@@ -63,8 +84,8 @@
       "title": "iOS Developer Intern",
       "company": "Loodos",
       "icon": "assets/images/loodos.png",
-      "date": "Jul 2025 - Present",
-      "description": "",
+      "date": "Jul 2025 - Aug 2025",
+      "description": "Built SwiftBrain, a community-driven quiz app for Swift developers, under mentorship.",
       "achievements": []
     },
     {
