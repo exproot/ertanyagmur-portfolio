@@ -101,6 +101,13 @@
   ],
   "education": [
     {
+      "title": "Master of Science, Software Engineering",
+      "school": "Samsun University",
+      "icon": "assets/images/samsun-university.png",
+      "date": "Sep 2026 - Present",
+      "achievements": []
+    },
+    {
       "title": "Bachelor of Engineering, Software Engineering",
       "school": "Samsun University",
       "icon": "assets/images/samsun-university.png",
